@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"gulp-svgmin",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "gulp-svgmin",
+    "description": "api documentation for [gulp-svgmin (v1.2.3)](https://github.com/ben-eb/gulp-svgmin) [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-svgmin.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-svgmin) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-svgmin.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-svgmin)",
     "devDependencies": {
-        "gulp-svgmin": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "gulp-svgmin": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-gulp-svgmin",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-gulp-svgmin",
+    "keywords": [
+        "documentation",
+        "gulp-svgmin"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_gulp_svgmin.js",
+    "name": "npmdoc-gulp-svgmin",
+    "nameAlias": "npmdoc_gulp_svgmin",
+    "nameOriginal": "npmdoc-gulp-svgmin",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-gulp-svgmin.git"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
