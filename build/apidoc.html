@@ -61,12 +61,122 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.gulp-svgmin">module gulp-svgmin</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svgmin.gulp-svgmin">
+            function <span class="apidocSignatureSpan"></span>gulp-svgmin
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svgmin.toString">
+            function <span class="apidocSignatureSpan">gulp-svgmin.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-svgmin.toString">module gulp-svgmin.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svgmin.toString.toString">
+            function <span class="apidocSignatureSpan">gulp-svgmin.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.gulp-svgmin" id="apidoc.module.gulp-svgmin">module gulp-svgmin</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svgmin.gulp-svgmin" id="apidoc.element.gulp-svgmin.gulp-svgmin">
+        function <span class="apidocSignatureSpan"></span>gulp-svgmin
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gulp-svgmin = function (opts) {
+    var stream = new _stream.Transform({ objectMode: true });
+    var svgo = void 0;
+
+    if (typeof options !== &#x27;function&#x27;) {
+        svgo = new _svgo2.default(opts);
+    }
+
+    stream._transform = function (file, encoding, cb) {
+        if (file.isNull()) {
+            return cb(null, file);
+        }
+
+        if (file.isStream()) {
+            return cb(new _gulpUtil.PluginError(PLUGIN_NAME, &#x27;Streaming not supported&#x27;));
+        }
+
+        if (file.isBuffer()) {
+            if (typeof opts === &#x27;function&#x27;) {
+                svgo = new _svgo2.default(opts(file));
+            }
+
+            svgo.optimize(String(file.contents), function (result) {
+                if (result.error) {
+                    return cb(new _gulpUtil.PluginError(PLUGIN_NAME, result.error));
+                }
+                file.contents = new Buffer(result.data);
+                cb(null, file);
+            });
+        }
+    };
+
+    return stream;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svgmin.toString" id="apidoc.element.gulp-svgmin.toString">
+        function <span class="apidocSignatureSpan">gulp-svgmin.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-svgmin.toString" id="apidoc.module.gulp-svgmin.toString">module gulp-svgmin.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svgmin.toString.toString" id="apidoc.element.gulp-svgmin.toString.toString">
+        function <span class="apidocSignatureSpan">gulp-svgmin.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 
