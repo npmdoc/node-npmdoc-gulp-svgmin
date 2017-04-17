@@ -1,9 +1,11 @@
 # api documentation for  [gulp-svgmin (v1.2.3)](https://github.com/ben-eb/gulp-svgmin)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-svgmin.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-svgmin) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-svgmin.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-svgmin)
 #### Minify SVG files with gulp.
 
-[![NPM](https://nodei.co/npm/gulp-svgmin.png?downloads=true)](https://www.npmjs.com/package/gulp-svgmin)
+[![NPM](https://nodei.co/npm/gulp-svgmin.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp-svgmin)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-svgmin/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-gulp-svgmin_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-svgmin/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-gulp-svgmin/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-gulp-svgmin/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-svgmin/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-svgmin/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-gulp-svgmin/build/screenCapture.npmPackageListing.svg)
 
@@ -18,7 +20,6 @@
 {
     "author": {
         "name": "Ben Briggs",
-        "email": "beneb.info@gmail.com",
         "url": "http://beneb.info"
     },
     "ava": {
@@ -74,8 +75,7 @@
     "main": "dist/index.js",
     "maintainers": [
         {
-            "name": "beneb",
-            "email": "therealbenbriggs@hotmail.com"
+            "name": "beneb"
         }
     ],
     "name": "gulp-svgmin",
@@ -86,7 +86,6 @@
         ]
     },
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/ben-eb/gulp-svgmin.git"
@@ -100,16 +99,6 @@
     "version": "1.2.3"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module gulp-svgmin](#apidoc.module.gulp-svgmin)
-
-
-
-# <a name="apidoc.module.gulp-svgmin"></a>[module gulp-svgmin](#apidoc.module.gulp-svgmin)
 
 
 
